@@ -1,140 +1,136 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-size: 16px;
-    line-height: 1.5;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 .grid-container-1 {
-    background: rgb(239, 239, 239);
-    max-width: 960px;
-    margin: 100px auto;
-    padding: 10px;
-    display: grid;
-    /* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
-    /* grid-template-columns: repeat(3, 1fr); 3 columns of 1 fr each */
-    /* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Minimum Width 200px, It'll accomodate as many boxes it can of size 200px */
-    
-    /* column-gap: 10px; /* gap between columns */
-    /* row-gap: 4px; gap between rows */ 
-    gap: 5px; /* gap between rows and columns */
+	background: rgb(239, 239, 239);
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 10px;
+	display: grid;
+	/* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
+	/* grid-template-columns: repeat(3, 1fr); 3 columns of 1 fr each */
+	/* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	); /* Minimum Width 200px, It'll accomodate as many boxes it can of size 200px */
 
+	/* column-gap: 10px; /* gap between columns */
+	/* row-gap: 4px; gap between rows */
+	gap: 5px; /* gap between rows and columns */
 }
 
 .grid-item-1 {
-    color: white;
-    background: rgb(129, 59, 59);
-    font-size: 20px;
-    padding: 20px;
-    border: skyblue 1px solid;
+	color: white;
+	background: rgb(129, 59, 59);
+	font-size: 20px;
+	padding: 20px;
+	border: skyblue 1px solid;
 }
 
 .grid-container-2 {
-    background: rgb(213, 213, 213);
-    max-width: 960px;
-    margin: 100px auto;
-    padding: 10px;
-    display: grid;
-    /* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
-    grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
-    /* grid-template-rows: repeat(3, 1fr); 3 rows of 1 fr each, Biggest Item determines the height. */
-    /* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
-    /* column-gap: 10px; /* gap between columns */
-    /* row-gap: 4px; gap between rows */ 
-    gap: 5px; /* gap between rows and columns */
-    align-items: flex-end; /* align items to the bottom */
-    justify-content: end; /*To see this change grid-template-columns: repeat(3, 100px);*/
+	background: rgb(213, 213, 213);
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 10px;
+	display: grid;
+	/* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
+	grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
+	/* grid-template-rows: repeat(3, 1fr); 3 rows of 1 fr each, Biggest Item determines the height. */
+	/* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
+	/* column-gap: 10px; /* gap between columns */
+	/* row-gap: 4px; gap between rows */
+	gap: 5px; /* gap between rows and columns */
+	align-items: flex-end; /* align items to the bottom */
+	justify-content: end; /*To see this change grid-template-columns: repeat(3, 100px);*/
 }
 
 .grid-item-2 {
-    color: white;
-    background: rgb(129, 59, 59);
-    font-size: 20px;
-    padding: 20px;
-    border: skyblue 1px solid;
+	color: white;
+	background: rgb(129, 59, 59);
+	font-size: 20px;
+	padding: 20px;
+	border: skyblue 1px solid;
 }
 
 .grid-item-2:nth-of-type(2) {
-    height: 100px;
-    width: 100px;
-    align-self: center;
-    justify-self: center;
+	height: 100px;
+	width: 100px;
+	align-self: center;
+	justify-self: center;
 }
 
 .grid-item-2:nth-of-type(3) {
-    width: 100px;
-    align-self: center;
-    justify-self: end;
+	width: 100px;
+	align-self: center;
+	justify-self: end;
 }
 
-
 .grid-container-3 {
-    background: rgb(213, 213, 213);
-    max-width: 960px;
-    margin: 100px auto;
-    padding: 10px;
-    display: grid;
-    /* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
-    grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
-    /* grid-template-rows: repeat(3, 1fr); 3 rows of 1 fr each, Biggest Item determines the height. */
-    /* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
-    /* column-gap: 10px; /* gap between columns */
-    /* row-gap: 4px; gap between rows */ 
-    gap: 5px; /* gap between rows and columns */
+	background: rgb(213, 213, 213);
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 10px;
+	display: grid;
+	/* grid-template-columns: 100px 200px 300px; 3 columns of 100 200 and 300 px */
+	grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
+	/* grid-template-rows: repeat(3, 1fr); 3 rows of 1 fr each, Biggest Item determines the height. */
+	/* grid-template-columns: repeat(3, 1fr) 4fr; 3 columns of 1 fr each */
+	/* column-gap: 10px; /* gap between columns */
+	/* row-gap: 4px; gap between rows */
+	gap: 5px; /* gap between rows and columns */
 }
 
 .grid-item-3 {
-    color: white;
-    background: rgb(129, 59, 59);
-    font-size: 20px;
-    padding: 20px;
-    border: skyblue 1px solid;
+	color: white;
+	background: rgb(129, 59, 59);
+	font-size: 20px;
+	padding: 20px;
+	border: skyblue 1px solid;
 }
 
 .grid-item-3:nth-of-type(2) {
-    grid-column: 2 / 4 ; /* 2nd column to 4th column */
-    /* grid-column: 1 / span 2; 1st row to 3rd row */
+	grid-column: 2 / 4; /* 2nd column to 4th column */
+	/* grid-column: 1 / span 2; 1st row to 3rd row */
 }
 
 .grid-item-3:nth-of-type(5) {
-    grid-row: 2 / 4 ; /* 2nd column to 4th column */
-    grid-column: 2 / span 2; /* 1st row to 3rd row */
-
+	grid-row: 2 / 4; /* 2nd column to 4th column */
+	grid-column: 2 / span 2; /* 1st row to 3rd row */
 }
 
-
-
 .grid-container-4 {
-    background: rgb(213, 213, 213);
-    max-width: 960px;
-    margin: 100px auto;
-    padding: 10px;
-    display: grid;
-   grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
+	background: rgb(213, 213, 213);
+	max-width: 960px;
+	margin: 100px auto;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /*3 columns of 1 fr each*/
 
-    gap: 5px; /* gap between rows and columns */
+	gap: 5px; /* gap between rows and columns */
 }
 
 .grid-item-4 {
-    color: white;
-    background: rgb(129, 59, 59);
-    font-size: 20px;
-    padding: 20px;
-    border: skyblue 1px solid;
+	color: white;
+	background: rgb(129, 59, 59);
+	font-size: 20px;
+	padding: 20px;
+	border: skyblue 1px solid;
 }
 
-@media(max-width: 500px) {
-    .grid-container-4 {
-        grid-template-columns: 1fr;
-    }
-    .grid-container-3 {
-        grid-template-columns: 1fr;
-        
-    }
-
+@media (max-width: 500px) {
+	.grid-container-4 {
+		grid-template-columns: 1fr;
+	}
+	.grid-container-3 {
+		grid-template-columns: 1fr;
+	}
 }
