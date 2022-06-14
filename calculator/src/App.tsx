@@ -3,8 +3,8 @@ import Calculator from "./components/Calculator";
 import Navbar from "./components/Navbar";
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Navbar />
-    <Calculator />
-  </ChakraProvider>
+	<ChakraProvider theme={theme}>
+		<Navbar />
+		<Calculator />
+	</ChakraProvider>
 );

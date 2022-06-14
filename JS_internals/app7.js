@@ -1,14 +1,14 @@
 function Counter() {
-    var count = 0;
-    this.increment = function() {
-        count++;
-        console.log(count);
-    }
-    this.decrement = function () { 
-        count--;
-        console.log(count);
-    }
-    // return this;
+	var count = 0;
+	this.increment = function () {
+		count++;
+		console.log(count);
+	};
+	this.decrement = function () {
+		count--;
+		console.log(count);
+	};
+	// return this;
 }
 
 // const counter = Counter();

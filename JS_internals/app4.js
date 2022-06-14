@@ -1,7 +1,7 @@
 // Closures
 // function x() {
 //     let a = 10;
-//     function y() { 
+//     function y() {
 //         console.log(a);
 //     }
 //     a = 20; // Will update a in the scope
@@ -13,17 +13,16 @@
 // console.log(z);
 // z();
 
-
 function a() {
-    let m = 10;
-    function b() { 
-        let n = 20;
-        function c() {
-            console.log(m);
-            console.log(n);
-        }
-        c();
-    }
-    b();
+	let m = 10;
+	function b() {
+		let n = 20;
+		function c() {
+			console.log(m);
+			console.log(n);
+		}
+		c();
+	}
+	b();
 }
-a()
+a();

@@ -2,13 +2,13 @@
 
 var x = 2;
 function square(num) {
-    const ans = num * num; 
-    return ans;
+	const ans = num * num;
+	return ans;
 }
 
 function cube(num) {
-    const ans = square(num) * num;
-    return ans;
+	const ans = square(num) * num;
+	return ans;
 }
 var a = cube(x);
 b = square(x);

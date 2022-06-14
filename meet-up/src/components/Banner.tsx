@@ -1,17 +1,17 @@
-import { Box } from '@chakra-ui/react';
-import { FunctionComponent } from 'react';
+import { Box } from "@chakra-ui/react";
+import { FunctionComponent } from "react";
 
-type BannerProps = {
-    
-}
- 
+type BannerProps = {};
+
 const Banner: FunctionComponent<BannerProps> = () => {
-    return (<header>
-        <Box>
-            <Box></Box>
-            <Box></Box>
-        </Box>
-    </header> );
-}
- 
+	return (
+		<header>
+			<Box>
+				<Box></Box>
+				<Box></Box>
+			</Box>
+		</header>
+	);
+};
+
 export default Banner;
