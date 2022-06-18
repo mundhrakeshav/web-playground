@@ -61,24 +61,28 @@ const SideBar: FunctionComponent<SideBarProps> = () => {
 				mt="30px"
 				borderRadius="20px"
 			/>
-			<IconButton
-				aria-label="Add"
-				icon={<MdAdd />}
-				size="md"
-				mt="10px"
-				mb="30px"
-				borderRadius="20px"
-				background="green.600"
-				variant="ghost"
-			/>
-			<IconButton
-				aria-label="Home"
-				icon={<MdHome />}
-				size="md"
-				mt="10px"
-				borderRadius="20px"
-				variant="ghost"
-			/>
+			<Link to="/new">
+				<IconButton
+					aria-label="Add"
+					icon={<MdAdd />}
+					size="md"
+					mt="10px"
+					mb="30px"
+					borderRadius="20px"
+					background="green.600"
+					variant="ghost"
+				/>
+			</Link>
+			<Link to="/">
+				<IconButton
+					aria-label="Home"
+					icon={<MdHome />}
+					size="md"
+					mt="10px"
+					borderRadius="20px"
+					variant="ghost"
+				/>
+			</Link>
 			<IconButton
 				aria-label="Favourite"
 				icon={<MdFavorite />}
