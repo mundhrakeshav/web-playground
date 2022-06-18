@@ -1,12 +1,10 @@
-import { Flex } from '@chakra-ui/react';
-import { FunctionComponent } from 'react';
+import { Flex } from "@chakra-ui/react";
+import { FunctionComponent } from "react";
 
-interface NotesProps {
-    
-}
- 
+interface NotesProps {}
+
 const Notes: FunctionComponent<NotesProps> = () => {
-    return ( <Flex>Notes</Flex> );
-}
- 
+	return <Flex>Notes</Flex>;
+};
+
 export default Notes;

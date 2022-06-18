@@ -128,7 +128,7 @@ const SideBar: FunctionComponent<SideBarProps> = () => {
 				borderRadius="20px"
 				variant="ghost"
 			/>
-            <Avatar size="xs" mb="20px" />
+			<Avatar size="xs" mb="20px" />
 		</Flex>
 	);
 };
