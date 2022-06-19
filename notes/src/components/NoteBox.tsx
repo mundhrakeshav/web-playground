@@ -13,7 +13,7 @@ const NoteBox: FunctionComponent<NoteBoxProps> = ({ note }) => {
 			flexDir="column"
 			border="1px solid white"
 			width="200px"
-			height="400px"
+			h="400px"
 			borderRadius="20px"
 			m="5px"
 			p="20px"
@@ -21,6 +21,7 @@ const NoteBox: FunctionComponent<NoteBoxProps> = ({ note }) => {
 			<Heading as="h4" size="30px">
 				{note.title.toUpperCase()}
 			</Heading>
+			<br />
 			<Text overflow="clip">{note.body}</Text>
 		</Flex>
 	);

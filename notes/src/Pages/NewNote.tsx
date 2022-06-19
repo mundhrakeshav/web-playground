@@ -20,20 +20,18 @@ const NewNote: FunctionComponent<NewNoteProps> = () => {
 	const [title, setTitle] = useState("");
 	const [note, setNote] = useState("");
 	const [notes, setNotes] = useLocalStorage("notes");
-	const createNote: Function = (): Note => {
-		const _note: Note = {
-			id: 1,
-			title,
-			body: note,
-			createdAt: new Date().getTime().toString(),
-			updatedAt: new Date().getTime().toString(),
-		};
-		return _note;
-	};
+
 	const handleSave: MouseEventHandler<HTMLButtonElement> = () => {
-		const _note: Note = createNote();
-		console.log(_note.toString());
-		setNotes([...notes, _note]);
+		setNotes([
+			...notes,
+			{
+				id: notes.length,
+				title,
+				body: note,
+				createdAt: new Date().getTime().toString(),
+				updatedAt: new Date().getTime().toString(),
+			},
+		]);
 	};
 	return (
 		<Flex width="70%" mt="100px" flexDir="column" ml="80px">

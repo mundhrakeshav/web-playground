@@ -9,12 +9,11 @@ export const App = () => (
 		<Flex>
 			<BrowserRouter>
 				<NoteContextProvider>
-
-				<SideBar />
-				<Routes>
-					<Route path="/" element={<Notes />} />
-					<Route path="/new" element={<NewNote />} />
-				</Routes>
+					<SideBar />
+					<Routes>
+						<Route path="/" element={<Notes />} />
+						<Route path="/new" element={<NewNote />} />
+					</Routes>
 				</NoteContextProvider>
 			</BrowserRouter>
 		</Flex>
