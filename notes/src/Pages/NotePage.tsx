@@ -6,33 +6,52 @@ import {
 	Flex,
 	Textarea,
 } from "@chakra-ui/react";
-import { EventHandler } from "framer-motion/types/events/types";
 import { FunctionComponent, MouseEventHandler, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStrorage";
 import { Note } from "../types/Note";
 
-interface NewNoteProps {
-	title?: string;
-	description?: string;
-}
+interface NotePageProps {}
 
-const NewNote: FunctionComponent<NewNoteProps> = () => {
+const NotePage: FunctionComponent<NotePageProps> = () => {
 	const [title, setTitle] = useState("");
 	const [note, setNote] = useState("");
 	const [notes, setNotes] = useLocalStorage("notes");
+	let { id } = useParams();
+	let navigate = useNavigate();
 
-	const handleSave: MouseEventHandler<HTMLButtonElement> = () => {
-		setNotes([
-			...notes,
-			{
-				id: notes.length,
+	const handleSave: MouseEventHandler<HTMLButtonElement> = () => {		
+		if (id !== undefined) {
+			notes[id] = {
+				id: id,
 				title,
 				body: note,
 				createdAt: new Date().getTime().toString(),
 				updatedAt: new Date().getTime().toString(),
-			},
-		]);
+			};
+			console.log(notes);
+			
+			setNotes(notes);
+			navigate("/");
+		} else {
+			console.log("ID is undefined");
+			setNotes([
+				...notes,
+				{
+					id: notes.length,
+					title,
+					body: note,
+					createdAt: new Date().getTime().toString(),
+					updatedAt: new Date().getTime().toString(),
+				},
+			]);
+		}
 	};
+
+	function getNoteFromID() {
+		return notes.find((note: Note) => note.id.toString() === id);
+	}
+
 	return (
 		<Flex width="70%" mt="100px" flexDir="column" ml="80px">
 			<Flex justifyContent="space-between">
@@ -76,4 +95,4 @@ const NewNote: FunctionComponent<NewNoteProps> = () => {
 	);
 };
 
-export default NewNote;
+export default NotePage;

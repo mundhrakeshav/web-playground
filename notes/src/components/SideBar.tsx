@@ -26,6 +26,7 @@ interface SideBarProps {}
 
 const SideBar: FunctionComponent<SideBarProps> = () => {
 	const sideBarColor = useColorModeValue("blackAlpha.200", "blackAlpha.300");
+
 	return (
 		<Flex
 			flexDir="column"
